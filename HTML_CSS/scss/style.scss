@@ -1,0 +1,129 @@
+@import 'about';
+@import 'portfolio';
+@import 'config';
+@import 'contact';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Mono', 'Poppins', sans-serif;
+  background: $grey;
+}
+
+// Navbar
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+  background: $dark;
+  border-bottom: solid $blue;
+
+  ul {
+    margin: auto;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    width: 70%;
+    justify-content: space-evenly;
+
+    li {
+      display: inline-block;
+      color: $light;
+      font-size: 1.3rem;
+      padding: 0.5em;
+      margin: 0 0.25em;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: $light;
+        text-transform: uppercase;
+        // padding: 0.3rem 0rem;
+        // border-top: solid 5px white;
+        // border-bottom: solid 5px white;
+
+        &:hover {
+          color: $orange;
+          text-shadow: 0 0 10px $orange, 0 0 40px $orange, 0 0 80px $orange;
+
+          // border: solid 5px white;
+          // box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////
+
+.logo {
+  font-size: 2rem;
+  color: $orange;
+  border: solid 5px $orange;
+  padding: 0.3rem 0.55rem;
+  cursor: default;
+
+  &:hover {
+    color: $orange;
+    box-shadow: 0 0 10px $orange, 0 0 40px $orange, 0 0 80px $orange;
+    text-shadow: 0 0 10px $orange, 0 0 40px $orange, 0 0 80px $orange;
+    border: solid 5px $orange;
+  }
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $grey;
+  pointer-events: none;
+  text-align: center;
+  // background: url('../img/nate-grant-QQ9LainS6tI-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // background: $blue;
+  background: linear-gradient(343deg, $light, $blue);
+  background-size: 600% 600%;
+  animation: back 30s ease infinite;
+
+  @keyframes back {
+    0% {
+      background-position: 28% 0%;
+    }
+    50% {
+      background-position: 73% 100%;
+    }
+    100% {
+      background-position: 28% 0%;
+    }
+  }
+
+  h1,
+  p {
+    z-index: 3;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    color: $orange;
+  }
+
+  p {
+    font-size: 2.5rem;
+    color: $dark;
+  }
+}

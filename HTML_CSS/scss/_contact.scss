@@ -1,0 +1,182 @@
+@import 'config';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.contact {
+  display: block;
+  // grid-template-columns: 20% 1fr 20%;
+  //   height: 100vh;
+  padding-top: 5rem;
+  pointer-events: all;
+  font-family: 'Poppins';
+  background: $grey;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    grid-column: 2 / 3;
+    // background: rgba(13, 30, 37, 0.9);
+    margin: auto;
+    margin-top: 4rem;
+    height: 100%;
+    z-index: 2;
+
+    cursor: default;
+    text-align: left;
+    // border: solid 1px white;
+    // border-radius: 10px;
+    color: $light;
+
+    .contact-form {
+      //   font-size: 3rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          color: $orange;
+          margin: 2rem 2rem 0 2rem;
+          font-size: 3rem;
+          padding: 1rem;
+          // flex: 0 0 40%;
+        }
+
+        p {
+          padding: 0rem 3rem;
+        }
+      }
+
+      form {
+        margin-top: 3rem;
+        margin-left: 3rem;
+        background-color: lighten($color: $grey, $amount: 2);
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        // border: solid 5px $blue;
+        border-radius: 10px;
+        flex: 0 0 50%;
+
+        .field {
+          background: $grey;
+          padding: 0.5rem;
+          margin-top: 0.88rem;
+          width: 100%;
+          border: solid 2px $blue;
+          border-radius: 10px;
+          color: $light;
+
+          &:focus {
+            box-shadow: 0 0 10px $blue, 0 0 20px $blue;
+            // border-color: $blue;
+            // border-radius: 10px;
+            outline: none;
+          }
+        }
+
+        textarea {
+          height: 7rem;
+        }
+
+        button {
+          padding: 0.5rem 1rem;
+          //   margin: 0.5rem;
+          margin-top: 0.88rem;
+          display: inline-block;
+          background-color: $grey;
+          border-radius: 5px;
+          border-color: $blue;
+          color: $blue;
+          width: fit-content;
+
+          &:hover {
+            background-color: $blue;
+            color: $light;
+          }
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          //   margin-top: 2rem;
+          //   margin-top: 0.88rem;
+          text-decoration: none;
+          color: $blue;
+          font-size: 2rem;
+          i {
+            // padding: 0rem 0.5rem;
+            margin-top: 0.88rem;
+            &:hover {
+              text-shadow: 0 0 10px $blue, 0 0 40px $blue;
+            }
+          }
+
+          p {
+            padding: 0 0.5rem;
+            margin-top: 0.88rem;
+            color: $light;
+            font-size: 1rem;
+            &:hover {
+              color: $blue;
+              text-shadow: 0 0 10px $blue, 0 0 40px $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 576px) {
+  .contact {
+    section {
+      max-width: 540px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    section {
+      max-width: 720px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .contact {
+    section {
+      max-width: 960px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    section {
+      max-width: 1200px;
+      margin-top: 4rem;
+    }
+  }
+}

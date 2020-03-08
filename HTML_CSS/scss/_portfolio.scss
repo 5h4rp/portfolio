@@ -1,0 +1,184 @@
+@import 'config';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.portfolio {
+  display: block;
+  // grid-template-columns: 20% 1fr 20%;
+  height: 100vh;
+  padding-top: 5rem;
+  pointer-events: all;
+  font-family: 'Poppins';
+  background: $grey;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    grid-column: 2 / 3;
+    // background: rgba(13, 30, 37, 0.9);
+    margin: auto;
+    margin-top: 2rem;
+    height: 100%;
+    z-index: 2;
+
+    cursor: default;
+    text-align: left;
+    // border: solid 1px white;
+    // border-radius: 10px;
+    color: $light;
+    // font-size: 0.5rem;
+  }
+
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  .skills {
+    font-size: 3rem;
+    margin: auto;
+    margin-top: 0px;
+    padding: 3rem;
+    text-align: center;
+
+    h2 {
+      color: $orange;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-top: 2rem;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        width: 17rem;
+        margin: 1rem;
+
+        color: $blue;
+        font-size: 1.2em;
+
+        // i:hover {
+        //   text-shadow: 0 0 10px $blue, 0 0 40px $blue;
+        // }
+
+        h3 {
+          font-size: 2.2rem;
+          color: $light;
+          margin: 0.3rem;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $light;
+        }
+      }
+    }
+  }
+
+  .exp,
+  .edu,
+  .extra,
+  .interests {
+    font-size: 3rem;
+    margin: auto;
+    margin-top: 0px;
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      color: $orange;
+      margin: 2rem;
+    }
+
+    .first-exp,
+    .clg,
+    .list {
+      margin-left: 2rem;
+      margin-top: 2rem;
+      padding: 1rem 6rem 1.5rem 3.5rem;
+      background-color: lighten($color: $grey, $amount: 2);
+      border-radius: 15px;
+      text-align: left;
+      h3 {
+        font-size: 1.5rem;
+      }
+      h4 {
+        font-size: 1.2rem;
+        padding-top: 0.8rem;
+        color: $blue;
+      }
+      h5 {
+        font-size: 1.2rem;
+        padding-top: 0.4rem;
+      }
+
+      ul {
+        font-size: 1rem;
+        padding-inline-start: 30px;
+        padding-top: 0.8rem;
+      }
+    }
+
+    .list {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .portfolio {
+    section {
+      max-width: 540px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    section {
+      max-width: 720px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .portfolio {
+    section {
+      max-width: 960px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio {
+    section {
+      max-width: 1200px;
+      margin-top: 4rem;
+      .exp,
+      .edu {
+        flex-direction: row;
+
+        .first-exp,
+        .clg,
+        .list {
+          margin-top: 5rem;
+        }
+      }
+    }
+  }
+}
