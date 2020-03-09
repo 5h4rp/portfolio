@@ -42,7 +42,7 @@
     .contact-form {
       //   font-size: 3rem;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-evenly;
 
       .title {
@@ -168,6 +168,9 @@
   .contact {
     section {
       max-width: 960px;
+      .contact-form {
+        flex-direction: row;
+      }
     }
   }
 }
@@ -177,6 +180,9 @@
     section {
       max-width: 1200px;
       margin-top: 4rem;
+      .contact-form {
+        flex-direction: row;
+      }
     }
   }
 }

@@ -17,10 +17,10 @@
   overflow-y: scroll;
   overflow-x: hidden;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  // padding-right: 1px;
+  // padding-left: 1px;
+  // margin-right: auto;
+  // margin-left: auto;
 
   section {
     display: flex;
@@ -41,11 +41,11 @@
     // font-size: 0.5rem;
   }
 
-  padding: 2rem;
+  // padding: 2rem;
   align-items: center;
   justify-content: center;
   .skills {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: auto;
     margin-top: 0px;
     padding: 3rem;
@@ -68,14 +68,14 @@
         margin: 1rem;
 
         color: $blue;
-        font-size: 1.2em;
+        font-size: 1.1em;
 
         // i:hover {
         //   text-shadow: 0 0 10px $blue, 0 0 40px $blue;
         // }
 
         h3 {
-          font-size: 2.2rem;
+          font-size: 1.8rem;
           color: $light;
           margin: 0.3rem;
         }
@@ -92,10 +92,10 @@
   .edu,
   .extra,
   .interests {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: auto;
     margin-top: 0px;
-    padding: 3rem;
+    padding: 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -108,9 +108,9 @@
     .first-exp,
     .clg,
     .list {
-      margin-left: 2rem;
-      margin-top: 2rem;
-      padding: 1rem 6rem 1.5rem 3.5rem;
+      // margin-left: 2rem;
+      // margin-top: 2rem;
+      padding: 1rem;
       background-color: lighten($color: $grey, $amount: 2);
       border-radius: 15px;
       text-align: left;
@@ -150,33 +150,119 @@
 
 @media (min-width: 768px) {
   .portfolio {
+    padding: 2rem;
     section {
+      .skills {
+        font-size: 2.5rem;
+      }
       max-width: 720px;
+
+      .exp,
+      .edu,
+      .extra,
+      .interests {
+        font-size: 2.5rem;
+        padding: 2rem;
+        .first-exp,
+        .clg,
+        .list {
+          padding: 1rem 3.5rem 1.5rem 3.5rem;
+        }
+      }
     }
   }
 }
 
 @media (min-width: 992px) {
   .portfolio {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem;
     section {
+      .skills {
+        font-size: 3rem;
+        ul {
+          li {
+            font-size: 1.2em;
+            h3 {
+              font-size: 2.2rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
       max-width: 960px;
+      .exp,
+      .edu,
+      .extra,
+      .interests {
+        font-size: 3rem;
+        padding: 3rem;
+        .first-exp,
+        .clg,
+        .list {
+          margin-left: 2rem;
+          margin-top: 2rem;
+          padding: 1rem 6rem 1.5rem 3.5rem;
+        }
+      }
     }
   }
 }
 
 @media (min-width: 1200px) {
   .portfolio {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem;
     section {
+      .skills {
+        font-size: 3rem;
+        ul {
+          li {
+            font-size: 1.2em;
+            h3 {
+              font-size: 2.2rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
       max-width: 1200px;
       margin-top: 4rem;
       .exp,
       .edu {
         flex-direction: row;
 
+        // .first-exp,
+        // .clg,
+        // .list {
+        //   margin-top: 5rem;
+        // }
+      }
+
+      .exp,
+      .edu,
+      .extra,
+      .interests {
+        font-size: 3rem;
+        padding: 3rem;
+
         .first-exp,
         .clg,
         .list {
-          margin-top: 5rem;
+          margin-left: 2rem;
+          margin-top: 2rem;
+          padding: 1rem 6rem 1.5rem 3.5rem;
         }
       }
     }

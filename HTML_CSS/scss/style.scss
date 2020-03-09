@@ -18,7 +18,7 @@ body {
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 5rem;
   padding: 0.7rem 2rem;
@@ -29,38 +29,67 @@ nav {
   background: $dark;
   border-bottom: solid $blue;
 
-  ul {
-    margin: auto;
-    display: flex;
-    list-style: none;
-    align-items: center;
-    width: 70%;
-    justify-content: space-evenly;
+  .menu {
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    background-color: #222831;
+    left: 0;
+    display: none;
 
-    li {
-      display: inline-block;
-      color: $light;
-      font-size: 1.3rem;
-      padding: 0.5em;
-      margin: 0 0.25em;
-      cursor: pointer;
+    ul {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      opacity: 0.8;
 
-      a {
-        text-decoration: none;
+      li {
+        display: block;
+        width: 100%;
+        text-align: center;
         color: $light;
-        text-transform: uppercase;
-        // padding: 0.3rem 0rem;
-        // border-top: solid 5px white;
-        // border-bottom: solid 5px white;
+        font-size: 1.3rem;
+        padding: 0.5em;
+        margin: 0 0.25em;
+        cursor: pointer;
+        border-bottom: solid 1px $light;
 
-        &:hover {
-          color: $orange;
-          text-shadow: 0 0 10px $orange, 0 0 40px $orange, 0 0 80px $orange;
+        a {
+          text-decoration: none;
+          color: $light;
+          text-transform: uppercase;
+          // padding: 0.3rem 0rem;
+          // border-top: solid 5px white;
+          // border-bottom: solid 5px white;
 
-          // border: solid 5px white;
-          // box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+          &:hover {
+            color: $orange;
+            text-shadow: 0 0 10px $orange, 0 0 40px $orange, 0 0 80px $orange;
+
+            // border: solid 5px white;
+            // box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+          }
         }
       }
+    }
+  }
+
+  label {
+    display: fixed;
+    float: right;
+    color: $light;
+    font-size: 2rem;
+  }
+
+  #toggle {
+    display: none;
+
+    &:checked + .menu {
+      display: block;
     }
   }
 }
@@ -112,18 +141,73 @@ nav {
     }
   }
 
-  h1,
-  p {
-    z-index: 3;
-  }
+  .landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-  h1 {
-    font-size: 3.5rem;
-    color: $orange;
-  }
+    h1,
+    p {
+      z-index: 3;
+    }
 
-  p {
-    font-size: 2.5rem;
-    color: $dark;
+    h1 {
+      font-size: 3.5rem;
+      color: $orange;
+    }
+
+    p {
+      font-size: 2.5rem;
+      color: $dark;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    .menu {
+      width: 100%;
+      position: static;
+      background-color: transparent;
+      display: block;
+
+      ul {
+        flex-direction: row;
+        width: 960px;
+
+        li {
+          border-bottom: none;
+          flex: 0 0 20%;
+        }
+      }
+    }
+    label {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    .menu {
+      width: 100%;
+      position: static;
+      background-color: transparent;
+      display: block;
+
+      ul {
+        flex-direction: row;
+        width: 1200px;
+
+        li {
+          border-bottom: none;
+          flex: 0 0 20%;
+        }
+      }
+    }
+    label {
+      display: none;
+    }
   }
 }
