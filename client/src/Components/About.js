@@ -1,6 +1,6 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import Me from '../img/Me.png';
+import Me from '../img/Me.jpg';
 import resume from '../files/Ajayender_Singh_Resume.pdf';
 
 const About = () => {

@@ -45,10 +45,10 @@
   align-items: center;
   justify-content: center;
   .skills {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: auto;
     margin-top: 0px;
-    padding: 3rem;
+    // padding: 3rem;
     text-align: center;
 
     h2 {
@@ -75,13 +75,13 @@
         // }
 
         h3 {
-          font-size: 1.8rem;
+          font-size: 1.3rem;
           color: $light;
           margin: 0.3rem;
         }
 
         p {
-          font-size: 1rem;
+          font-size: 0.8rem;
           color: $light;
         }
       }
@@ -92,10 +92,10 @@
   .edu,
   .extra,
   .interests {
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin: auto;
     margin-top: 0px;
-    padding: 1rem;
+    // padding: 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -115,7 +115,7 @@
       border-radius: 15px;
       text-align: left;
       h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
       h4 {
         font-size: 1.2rem;
@@ -123,12 +123,12 @@
         color: $blue;
       }
       h5 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         padding-top: 0.4rem;
       }
 
       ul {
-        font-size: 1rem;
+        font-size: 0.9rem;
         padding-inline-start: 30px;
         padding-top: 0.8rem;
       }
@@ -140,20 +140,32 @@
   }
 }
 
-@media (min-width: 576px) {
-  .portfolio {
-    section {
-      max-width: 540px;
-    }
-  }
-}
+// @media (min-width: 576px) {
+//   .portfolio {
+//     section {
+//       max-width: 540px;
+//     }
+//   }
+// }
 
 @media (min-width: 768px) {
   .portfolio {
     padding: 2rem;
     section {
       .skills {
+        padding: 3rem;
         font-size: 2.5rem;
+        ul {
+          li {
+            font-size: 1.2em;
+            h3 {
+              font-size: 2.2rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
       }
       max-width: 720px;
 
@@ -167,6 +179,9 @@
         .clg,
         .list {
           padding: 1rem 3.5rem 1.5rem 3.5rem;
+          ul {
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -182,6 +197,7 @@
     padding: 2rem;
     section {
       .skills {
+        padding: 3rem;
         font-size: 3rem;
         ul {
           li {
@@ -206,6 +222,9 @@
         .first-exp,
         .clg,
         .list {
+          ul {
+            font-size: 1rem;
+          }
           margin-left: 2rem;
           margin-top: 2rem;
           padding: 1rem 6rem 1.5rem 3.5rem;
@@ -224,6 +243,7 @@
     padding: 2rem;
     section {
       .skills {
+        padding: 3rem;
         font-size: 3rem;
         ul {
           li {
@@ -263,6 +283,9 @@
           margin-left: 2rem;
           margin-top: 2rem;
           padding: 1rem 6rem 1.5rem 3.5rem;
+          ul {
+            font-size: 1rem;
+          }
         }
       }
     }

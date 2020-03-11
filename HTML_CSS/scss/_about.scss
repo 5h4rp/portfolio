@@ -60,7 +60,7 @@
 
       .photo {
         padding: 1rem 0rem;
-        width: 270px;
+        width: 170px;
       }
 
       img {
@@ -111,7 +111,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-
+      text-align: center;
       h3 {
         color: $blue;
       }
@@ -139,6 +139,11 @@
 @media (min-width: 768px) {
   .about {
     section {
+      .ph {
+        .photo {
+          width: 220px;
+        }
+      }
       max-width: 720px;
       flex-direction: column;
     }
@@ -148,9 +153,15 @@
 @media (min-width: 992px) {
   .about {
     section {
+      .ph {
+        .photo {
+          width: 270px;
+        }
+      }
       max-width: 960px;
       flex-direction: row;
       .bio {
+        text-align: left;
         h3,
         p {
           font-size: 1.4rem;
@@ -163,10 +174,16 @@
 @media (min-width: 1200px) {
   .about {
     section {
+      .ph {
+        .photo {
+          width: 270px;
+        }
+      }
       max-width: 1200px;
       flex-direction: row;
       margin-top: 4rem;
       .bio {
+        text-align: left;
         h3,
         p {
           font-size: 1.4rem;
